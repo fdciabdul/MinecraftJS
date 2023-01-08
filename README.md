@@ -4,9 +4,9 @@ Most of the code is made with vanilla JavaScript.
 The 3D is built with the library THREE.js.  
 
 **Links:**
-- Main branch: <https://matteokeole.github.io/minecraftjs>
-- GUI demo: <https://matteokeole.github.io/minecraftjs/gui.html>
-- GUI demo 2: <https://matteokeole.github.io/minecraftjs/branch/gui>
+- Main branch: <https://fdciabdul.github.io/minecraftjs>
+- GUI demo: <https://fdciabdul.github.io/minecraftjs/gui.html>
+- GUI demo 2: <https://fdciabdul.github.io/minecraftjs/branch/gui>
 
 **Features:**
 + 3D environment with noise terrain generation & basic movement mechanics
