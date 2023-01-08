@@ -1,0 +1,86 @@
+Event listeners
+- Resize (document)				Resize the game (max supported window scale && < settings scale)
+- Mouse over (inventory)		Hover items, display tooltip
+- Left click (inventory)		Select an item if hovered
+- Right click (document)		Prevent default, acts like left click
+- Wheel (hud)					Switch selected slot on the hotbar
+- Keybinds (document)
+	- F1						Toggle HUD
+	- F3						Toggle debug menu
+	- Tab						Toggle inventory
+	- Escape					Close the current opened layer
+	- Digit1 to Digit9			Switch selected slot on the hotbar
+	- F3 + H					Toggle advanced tooltips
+	- F3 + Escape				Freeze the game
+
+
+
+
+
+
+
+
+Layers
+- HUD
+	- Hotbar
+	- Hotbar selector
+	- Hotbar tooltip
+- Crosshair
+	- Inverted crosshair
+- Inventory
+	- Player inventory
+- Tooltip
+	- Item name (unicolor)
+	- Item secondary info (multicolor)
+- Pause
+	- "Game paused" text
+- Debug
+	- Game version
+	- FPS counter
+	- Player position
+	- Player position, block-based
+	- Player position, chunk-based
+	- Player direction
+	- JavaScript version
+	- Max CPU logical cores
+	- Display size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Components toggled with F1:
+- Crosshair
+- Hotbar
+- Experience bar
+- Health bar
+- Hunger
+- Selected item tooltip
+- Debug menu
+
+
+
+
+
+
+
+Module scripts
+Load textures in a single object!
+
+Fetch all resources from the resource list as JSON, then:
+	Init the layers got from gui.json
+
+	Append the fragment LayerFragment to the page
+
+	Load textures, then:
+		Add event listeners

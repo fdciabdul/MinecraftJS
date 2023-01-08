@@ -1,0 +1,28 @@
+[{
+		"name": "main-menu",
+		"components": [{
+				"name": "minecraft1",
+				"visible": false,
+				"origin": ["center", "top"],
+				"offset": [-59, 30],
+				"size": [156, 44],
+				"texture": "gui/title/minecraft.png",
+				"uv": [0, 0]
+			}, {
+				"name": "minecraft2",
+				"visible": false,
+				"origin": ["center", "top"],
+				"offset": [78, 30],
+				"size": [120, 44],
+				"texture": "gui/title/minecraft.png",
+				"uv": [0, 45]
+			}, {
+				"type": "text",
+				"name": "version",
+				"origin": ["center", "center"],
+				"offset": [0, 0],
+				"text": "Test",
+				"color": "red",
+				"text_shadow": true
+		}]
+}]

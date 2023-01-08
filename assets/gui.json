@@ -1,0 +1,135 @@
+[{
+		"name": "hud",
+		"components": [{
+				"name": "hotbar",
+				"type": "container",
+				"origin": ["center", "bottom"],
+				"offset": [0, 0],
+				"size": [182, 22],
+				"texture": "gui/widgets.png",
+				"uv": [0, 0]
+			}, {
+				"name": "selector",
+				"origin": ["center", "bottom"],
+				"offset": [-80, -1],
+				"size": [24, 24],
+				"texture": "gui/widgets.png",
+				"uv": [0, 22]
+		}]
+	}, {
+		"name": "crosshair",
+		"components": [{
+				"name": "crosshair",
+				"origin": ["center", "center"],
+				"size": [9, 9],
+				"texture": "gui/icons.png",
+				"uv": [3, 3]
+		}]
+	}, {
+		"name": "debug",
+		"visible": false,
+		"components": [{
+				"name": "version",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 1],
+				"text": "Minecraft JS (pre-alpha 220404)",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "fps",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 10],
+				"text": "",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "xyz",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 28],
+				"text": "XYZ: 0.000 / 0.00000 / 0.000",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "block",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 37],
+				"text": "Block: 0 0 0",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "chunk",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 46],
+				"text": "Chunk: 0 0 0",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "facing",
+				"type": "text",
+				"origin": ["left", "top"],
+				"offset": [1, 55],
+				"text": "Facing: - (Towards - -) (0 / 0)",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "js",
+				"type": "text",
+				"origin": ["right", "top"],
+				"offset": [1, 1],
+				"text": "",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "cpu",
+				"type": "text",
+				"origin": ["right", "top"],
+				"offset": [1, 19],
+				"text": "",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+			}, {
+				"name": "display",
+				"type": "text",
+				"origin": ["right", "top"],
+				"offset": [1, 37],
+				"text": "",
+				"text_background": "#080400",
+				"text_background_alpha": 0.21
+		}]
+	}, {
+		"name": "inventory",
+		"visible": false,
+		"components": [{
+				"name": "player_inventory",
+				"type": "container",
+				"origin": ["center", "center"],
+				"size": [176, 166],
+				"texture": "gui/container/inventory.png",
+				"uv": [0, 0]
+		}]
+	}, {
+		"name": "pause",
+		"visible": false,
+		"components": [{
+				"name": "title",
+				"type": "text",
+				"origin": ["center", "top"],
+				"offset": [0, 9],
+				"text": "Game Paused",
+				"text_shadow": true
+		}]
+	}, {
+		"name": "tooltip",
+		"visible": false,
+		"components": [{
+				"name": "item",
+				"origin": ["center", "top"],
+				"offset": [0, 0],
+				"size": [16, 16]
+		}]
+}]

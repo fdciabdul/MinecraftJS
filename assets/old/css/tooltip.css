@@ -1,0 +1,39 @@
+/* Background and outer border color = #100010F0 */
+/* Inner border (top) color = #26005FF5 */
+/* Inner border (bottom) color = #180035F5 */
+
+:root {
+	--scale: 2px;
+}
+
+.tooltip {
+	margin: auto;
+	position: absolute;
+	border: var(--scale) solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to bottom, #26005FF5, #180035F5);
+	background-color: #100010F0;
+	z-index: 2;
+}
+.tooltip::before {
+	content: "";
+	width: calc(100% + 4 * var(--scale));
+	height: calc(100% + 4 * var(--scale));
+	left: calc(-2 * var(--scale));
+	top: calc(-2 * var(--scale));
+	position: absolute;
+	background: linear-gradient(
+			to bottom,
+			#100010F0 var(--scale), transparent 0, transparent calc(100% - var(--scale)),
+			#100010F0 calc(100% - var(--scale))
+		) no-repeat,
+		linear-gradient(
+			to left,
+			#100010F0 var(--scale), transparent 0, transparent calc(100% - var(--scale)),
+			#100010F0 calc(100% - var(--scale))
+		) no-repeat;
+	background-position: center;
+	background-size:
+		calc(100% - (2 * var(--scale))),
+		100% calc(100% - (2 * var(--scale)));
+}

@@ -1,0 +1,23 @@
+@import url(scene.css);
+@import url(layer.css);
+@import url(tooltip.css);
+
+body {
+	margin: 0;
+	overflow: hidden;
+	cursor: default;
+}
+
+.slots {
+	position: absolute;
+	z-index: 2;
+}
+
+.slot::before {
+	content: "";
+	width: 32px;
+	height: 32px;
+	margin: 2px;
+	position: absolute;
+}
+.slot:hover::before {background-color: rgba(255, 255, 255, .5)}

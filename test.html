@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="data:;base64,=">
+		<style>
+			body {
+				height: 100vh;
+				margin: 0;
+				box-shadow: inset 0 0 0 200px #151515;
+				background-color: #545454;
+			}
+		</style>
+		<title>Test</title>
+	</head>
+
+	<body></body>
+
+	<script>
+		function parseHexColor(c) {
+  var j = {};
+
+  var s = c.replace(/^#([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})$/, function(_, r, g, b) {
+    j.red = parseInt(r, 16);
+    j.green = parseInt(g, 16);
+    j.blue = parseInt(b, 16);
+
+    return "";
+  });
+
+  if(s.length == 0) {
+    return j;
+  }
+};
+
+function colorDifference(a, b) {
+  var a = parseHexColor(a);
+  var b = parseHexColor(b);
+
+  if(typeof(a) != 'undefined' && typeof(b) != 'undefined') {
+    return "#" + (a.red - b.red).toString(16) + (a.green - b.green).toString(16) + (a.blue - b.blue).toString(16);
+  }
+};
+// alert(colorDifference('#545454', '#151515'))
+	</script>
+</html>

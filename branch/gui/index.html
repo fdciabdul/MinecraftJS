@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Mattéo Legagneux">
+		<link rel="icon" href="data:;base64,=">
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+				background-color: #312646;
+			}
+
+			:root {
+				--scale: 2px;
+			}
+
+			canvas {
+				image-rendering: -moz-crisp-edges;
+				image-rendering: -webkit-crisp-edges;
+				image-rendering: pixelated;
+				image-rendering: crisp-edges;
+			}
+
+			.layer {
+				position: absolute;
+				background-color: #000000C2;
+			}
+
+			#tooltip {
+				padding: calc(2 * var(--scale));
+				padding-bottom: 0;
+				position: absolute;
+				border: var(--scale) solid;
+				border-image-slice: 1;
+				border-image-source: linear-gradient(to bottom, #26005FF5, #180035F5);
+				opacity: 0;
+				background-color: #100010F0;
+				pointer-events: none;
+				z-index: 2;
+			}
+			#tooltip::before {
+				content: "";
+				width: calc(100% + 4 * var(--scale));
+				height: calc(100% + 4 * var(--scale));
+				left: calc(-2 * var(--scale));
+				top: calc(-2 * var(--scale));
+				position: absolute;
+				background: linear-gradient(
+						to bottom,
+						#100010F0 var(--scale), transparent 0, transparent calc(100% - var(--scale)),
+						#100010F0 calc(100% - var(--scale))
+					) no-repeat,
+					linear-gradient(
+						to left,
+						#100010F0 var(--scale), transparent 0, transparent calc(100% - var(--scale)),
+						#100010F0 calc(100% - var(--scale))
+					) no-repeat;
+				background-position: center;
+				background-size:
+					calc(100% - (2 * var(--scale))),
+					100% calc(100% - (2 * var(--scale)));
+			}
+		</style>
+		<script src="main.js" type="module"></script>
+		<title>Button test</title>
+	</head>
+
+	<body></body>
+</html>
